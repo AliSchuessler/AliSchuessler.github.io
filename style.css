@@ -1,0 +1,212 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #faf7f3;
+}
+
+/* Layout helpers */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: #1f2933;
+  color: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.logo-main {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.site-nav a {
+  color: #f9fafb;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background-color: #f2ece5;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(circle at top left, #f5e4c0, #fdfaf6);
+}
+
+.hero-inner {
+  padding: 3rem 0 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-cta {
+  font-weight: 500;
+}
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 0.4rem;
+}
+
+/* Figures */
+.figure-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.figure-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.2rem 1.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.figure-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.figure-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.figure-frame {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* The iframe itself */
+.figure-frame iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+}
+
+/* Lists */
+.bullets {
+  margin-left: 1.2rem;
+}
+
+.bullets li {
+  margin-bottom: 0.4rem;
+}
+
+/* Contact */
+.contact-line {
+  margin-bottom: 0.4rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .figure-frame iframe {
+    height: 360px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
