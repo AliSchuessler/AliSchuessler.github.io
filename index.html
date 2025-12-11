@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ali Schuessler | Plant & Desert Physiologist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">Ali Schuessler</span>
+        <span class="logo-sub">Plant Physiology · Desert Ecology</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#figures">Figures</a>
+        <a href="#fieldwork">Fieldwork & Outreach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Saguaro water balance, desert heat, and plant function.</h1>
+          <p>
+            I am a plant physiologist and desert ecologist working on how
+            <em>Carnegiea gigantea</em> (saguaro) and other Sonoran plants
+            respond to heat, drought, and changing climate.
+          </p>
+          <p class="hero-cta">
+            This site hosts project summaries, interactive figures,
+            and opportunities for collaboration and public engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          I study the physiology and ecology of desert plants, with a focus on
+          water relations, thermal stress, and long-term responses to a warming,
+          drying climate. My work combines field measurements, sensor networks,
+          and quantitative analysis to understand how iconic species like
+          saguaro cacti are changing through time.
+        </p>
+        <p>
+          I am based in Phoenix, Arizona, and spend my time between fieldwork,
+          lab management, data analysis, and public outreach. This site is a
+          living space for current projects, visualizations, and ways to get
+          involved.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research Themes</h2>
+        <div class="cards-grid">
+
+          <article class="card">
+            <h3>Saguaro Water Balance</h3>
+            <p>
+              Tracking changes in volume:surface ratio (V:S) across seasons to
+              understand how saguaros store and lose water, and how much
+              rainfall is required to recharge a desiccated plant.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Photosynthetic Performance & Stress</h3>
+            <p>
+              Monitoring FVFM (dark-adapted quantum yield) as a window into
+              photosystem health, and relating it to temperature, humidity,
+              vapor pressure deficit, and plant water status.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Microclimate & Extreme Heat</h3>
+            <p>
+              Using environmental sensor networks (temperature, humidity,
+              radiation, precipitation) to quantify the microclimates saguaros
+              experience across elevation and aspect.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Fieldwork & Collaboration</h3>
+            <p>
+              Inter-agency surveys, long-term monitoring, and collaborative
+              projects that link fundamental plant physiology with conservation
+              and management decisions in the Sonoran Desert.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FIGURES -->
+    <section id="figures" class="section section-alt">
+      <div class="container">
+        <h2>Interactive Figures</h2>
+        <p>
+          These figures are built from ongoing analyses of saguaro physiology
+          and microclimate. Hover and zoom to explore the data. New plots will
+          be added as projects develop.
+        </p>
+
+        <div class="figure-grid">
+
+          <div class="figure-card">
+            <h3>V:S, Daily Max Temperature, and Precipitation Through Time</h3>
+            <p class="figure-caption">
+              Size-class averaged V:S with standard errors, overlaid with daily
+              maximum temperature and precipitation.
+            </p>
+            <!-- Replace src when you export the Plotly HTML file -->
+            <div class="figure-frame">
+              <iframe
+                src="figures/vs_temp_precip.html"
+                loading="lazy"
+                title="V:S, Tmax, and Precipitation"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="figure-card">
+            <h3>FVFM, Daily Max Temperature, and Precipitation Through Time</h3>
+            <p class="figure-caption">
+              Mean FVFM by size class with uncertainty, shown alongside daily
+              temperature and rainfall.
+            </p>
+            <div class="figure-frame">
+              <iframe
+                src="figures/fvfm_temp_precip.html"
+                loading="lazy"
+                title="FVFM, Tmax, and Precipitation"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="figure-card">
+            <h3>FVFM vs Relative V:S (Medium Plants)</h3>
+            <p class="figure-caption">
+              FVFM as a function of relative V:S (% of maximum), with a
+              log-curved fit to highlight how photosystem performance changes
+              as plants transition between “fat” and “dry” states.
+            </p>
+            <div class="figure-frame">
+              <iframe
+                src="figures/fvfm_vs_relative_vs_med.html"
+                loading="lazy"
+                title="FVFM vs relative V:S"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FIELDWORK & OUTREACH -->
+    <section id="fieldwork" class="section">
+      <div class="container">
+        <h2>Fieldwork & Outreach</h2>
+        <p>
+          This project is grounded in field measurements across South Mountain
+          and other Sonoran sites, and in sharing what we learn with the public.
+        </p>
+        <ul class="bullets">
+          <li>Long-term monitoring of tagged saguaros across elevation bands.</li>
+          <li>Nighttime FVFM campaigns to track seasonal stress and recovery.</li>
+          <li>Sensor networks logging temperature, humidity, and radiation.</li>
+          <li>Talks, guided walks, and educational materials on desert resilience.</li>
+        </ul>
+        <p>
+          If you are interested in collaboration, data use, or educational
+          partnerships, please reach out.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          For questions about the research, data visualization, or potential
+          collaborations, you can reach me at:
+        </p>
+        <p class="contact-line">
+          <strong>Email:</strong> <span>your.email@domain.com</span>
+          <!-- replace with a real address when you're ready -->
+        </p>
+        <p class="contact-line">
+          You can also connect with me on LinkedIn and other professional
+          networks (links coming soon).
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Ali Schuessler</span>
+      <span>Sonoran Desert · Phoenix, Arizona</span>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
