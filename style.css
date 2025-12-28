@@ -212,10 +212,9 @@ body {
 }
 /* --- Photos --- */
 /* Photos: horizontal scroller */
+/* Photos: horizontal scroller */
 .photo-scroller {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(260px, 1fr);
+  display: flex;
   gap: 16px;
 
   overflow-x: auto;
@@ -225,15 +224,18 @@ body {
 }
 
 .photo-scroller > .photo-card {
+  flex: 0 0 auto;
+  width: 360px;            /* controls card width on desktop */
   scroll-snap-align: start;
 }
 
 /* Photo cards: show full image (no cropping) */
-.photo-card img {
+/* Photo cards: show full image (no cropping) */
+.photo-scroller .photo-card img {
   width: 100%;
-  height: 260px;         /* adjust if you want taller/shorter cards */
-  object-fit: contain;   /* THIS prevents cropping */
-  background: rgba(0,0,0,0.03); /* subtle matte behind “contained” images */
+  height: 260px;
+  object-fit: contain;
+  background: rgba(0,0,0,0.03);
   border-radius: 12px;
   display: block;
   cursor: pointer;
