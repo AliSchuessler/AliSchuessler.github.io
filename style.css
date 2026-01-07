@@ -356,4 +356,14 @@ body {
   background: rgba(0, 0, 0, 0.05);
 }
 
+/* Force dropdown menu link visibility (overrides .site-nav a) */
+.site-nav .nav-dropdown-content a,
+.site-nav .nav-dropdown-content a:visited {
+  color: #1a1a1a !important;
+  opacity: 1 !important;
+}
+
+.site-nav .nav-dropdown-content {
+  background: #ffffff;
+}
 
