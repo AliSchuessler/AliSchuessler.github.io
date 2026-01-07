@@ -310,6 +310,18 @@ body {
   opacity: 0.8;
 }
 
+/* --- Nav dropdown --- */
+.nav-dropdown { position: relative; display: inline-block; }
+
+.nav-dropbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 .nav-dropdown-content {
   display: none;
   position: absolute;
@@ -318,52 +330,27 @@ body {
   min-width: 260px;
   z-index: 1000;
 
-  background: #fff;
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   padding: 8px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-.nav-dropdown-content a {
+.site-nav .nav-dropdown-content a,
+.site-nav .nav-dropdown-content a:visited {
   display: block;
   padding: 10px 10px;
   border-radius: 10px;
   text-decoration: none;
-}
-
-.nav-dropdown-content a:hover {
-  background: rgba(0,0,0,0.04);
-}
-
-/* Show dropdown on hover (desktop) */
-.nav-dropdown:hover .nav-dropdown-content {
-  display: block;
-}
-
-/* --- Fix dropdown text visibility --- */
-.nav-dropdown-content {
-  background: #ffffff;
-}
-
-.nav-dropdown-content a {
-  color: #1a1a1a;          /* force readable dark text */
-  opacity: 1;              /* override any inherited transparency */
-}
-
-.nav-dropdown-content a:hover {
   color: #1a1a1a;
-  background: rgba(0, 0, 0, 0.05);
+  opacity: 1;
 }
 
-/* Force dropdown menu link visibility (overrides .site-nav a) */
-.site-nav .nav-dropdown-content a,
-.site-nav .nav-dropdown-content a:visited {
-  color: #1a1a1a !important;
-  opacity: 1 !important;
+.site-nav .nav-dropdown-content a:hover {
+  background: rgba(0,0,0,0.05);
 }
 
-.site-nav .nav-dropdown-content {
-  background: #ffffff;
-}
+.nav-dropdown:hover .nav-dropdown-content { display: block; }
+
 
