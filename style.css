@@ -289,3 +289,56 @@ body {
   font-size: 0.95rem;
 }
 
+/* --- Nav dropdown --- */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-caret {
+  margin-left: 6px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 260px;
+  z-index: 1000;
+
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.nav-dropdown-content a {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.nav-dropdown-content a:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+/* Show dropdown on hover (desktop) */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+
