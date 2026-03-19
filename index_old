@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ali Schuessler | Plant & Desert Ecologist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">Ali Schuessler</span>
+        <span class="logo-sub">Plant Physiology · Desert Ecology</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+      
+        <div class="nav-dropdown">
+          <button class="nav-dropbtn" type="button">
+            Projects
+            <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav-dropdown-content">
+            <a href="projects/Saguaro Work/">Saguaro Water Balance</a>
+            <a href="projects/microbial/">Root Fungal Associations</a>
+            <a href="projects/desert trees/">Desert Trees</a>
+            <a href="projects/other/">Other</a>
+          </div>
+        </div>
+      
+        <a href="#figures">Figures</a>
+        <a href="#photos">Photos</a>
+        <a href="#fieldwork">Fieldwork & Outreach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Saguaro water balance, desert heat, and plant function.</h1>
+          <p>
+            I am a fungal ecologist and desert plant physiologist working on how
+            <em>Carnegiea gigantea</em> (saguaro) and other Sonoran plants
+            respond to heat, drought, and a changing climate.
+          </p>
+          <p class="hero-cta">
+            This site hosts project summaries, figures,
+            opportunities for collaboration, and public engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          I study the root fungal relationships, physiology and ecology of desert plants, with a focus on
+          water relations, thermal stress, and long-term responses to a warming,
+          drying climate. My work combines field measurements,
+          and quantitative analysis to understand how iconic species like
+          saguaro cacti are changing through time and how they will cope with a changing climate. 
+        </p>
+        <p>
+          I am based in Phoenix, Arizona, and spend my time between fieldwork,
+          lab management, data analysis, and public outreach. This site is a
+          living space for current projects, visualizations, and ways to get
+          involved.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research Themes</h2>
+        <div class="cards-grid">
+
+          <article class="card">
+            <h3>Saguaro Water Balance</h3>
+            <p>
+              Tracking changes in volume:surface ratio (V:S) across seasons to
+              understand how saguaros store and lose water, and how much
+              rainfall is required to recharge a desiccated plant.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Photosynthetic Performance & Stress</h3>
+            <p>
+              Monitoring FVFM (dark-adapted quantum yield) as a window into
+              photosystem health, and relating it to temperature, humidity,
+              vapor pressure deficit, and plant water status.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Climate & Extreme Heat</h3>
+            <p>
+              Using environmental variables (temperature, humidity,
+              radiation, precipitation) to quantify the conditions saguaros
+              experience.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Fieldwork & Collaboration</h3>
+            <p>
+              Inter-agency surveys, long-term monitoring, and collaborative
+              projects that link fundamental plant physiology with conservation
+              and management decisions in the Sonoran Desert.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FIGURES -->
+    <section id="figures" class="section section-alt">
+      <div class="container">
+        <h2>Interactive Figures</h2>
+        <p>
+          These figures are built from ongoing analyses of saguaro physiology
+          and microclimate. Hover and zoom to explore the data. New plots will
+          be added as projects develop.
+        </p>
+
+        <div class="figure-grid">
+
+          <div class="figure-card">
+            <h3>V:S, Daily Max Temperature, and Precipitation Through Time</h3>
+            <p class="figure-caption">
+              Size-class averaged V:S with standard errors, overlaid with daily
+              maximum temperature and precipitation.
+            </p>
+            <!-- Replace src when you export the Plotly HTML file -->
+            <div class="figure-frame">
+              <iframe
+                src="figures/vs_temp_precip_interactive_clean.html"
+                loading="lazy"
+                title="V:S, Tmax, and Precipitation"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="figure-card">
+            <h3>FVFM, Daily Max Temperature, and Precipitation Through Time</h3>
+            <p class="figure-caption">
+              Mean FVFM by size class with uncertainty, shown alongside daily
+              temperature and rainfall.
+            </p>
+            <div class="figure-frame">
+              <iframe
+                src="figures/fvfm_temp_precip_clean.html"
+                loading="lazy"
+                title="FVFM, Tmax, and Precipitation"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="figure-card">
+            <h3>FVFM vs Relative V:S (Medium Plants)</h3>
+            <p class="figure-caption">
+              FVFM as a function of relative V:S (% of maximum), with a
+              log-curved fit to highlight how photosystem performance changes
+              as plants transition between “fat” and “dry” states.
+            </p>
+            <div class="figure-frame">
+              <iframe
+                src="figures/fvfm_vs_vsrel_med (3).html"
+                loading="lazy"
+                title="FVFM vs relative V:S"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    
+<!-- PHOTOS -->
+<section id="photos" class="section">
+  <div class="container">
+    <h2>Photos</h2>
+    <p>
+      Field sites, instrumentation, and seasonal conditions across South Mountain and other Sonoran locations.
+      Click any image to view it full-size.
+    </p>
+
+<div class="photo-scroller" aria-label="Photo highlights">
+  <figure class="photo-card">
+    <img src="images/IMG_0459.JPEG"
+         alt="South Mountain field site overview"
+         onclick="openLightbox(this)">
+    <figcaption>Data collection on a small plant included in our study.</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_0472.JPEG"
+         alt="Saguaro monitoring at South Mountain"
+         onclick="openLightbox(this)">
+    <figcaption>Saguaro monitoring and high accuracy GPS marking.</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_1114.JPEG"
+         alt="Field instrumentation and sensors"
+         onclick="openLightbox(this)">
+    <figcaption>A young saguaro included in our study.</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_1116.JPEG"
+         alt="Seasonal desert conditions"
+         onclick="openLightbox(this)">
+    <figcaption>My field assistant Pepper hard at work.</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_1690.JPEG"
+         alt="South Mountain landscape"
+         onclick="openLightbox(this)">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_3003.JPEG"
+         alt="South Mountain landscape"
+         onclick="openLightbox(this)">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="images/IMG_3023.JPEG"
+         alt="South Mountain landscape"
+         onclick="openLightbox(this)">
+    <figcaption></figcaption>
+  </figure>
+
+<figure class="photo-card">
+    <img src="images/IMG_2302.JPEG"
+         alt="South Mountain landscape"
+         onclick="openLightbox(this)">
+    <figcaption>Wendy Hodgson explaining how a woodpecker boot is formed to Pepper.</figcaption>
+  </figure>
+
+<figure class="photo-card">
+    <img src="images/IMG_8294.JPEG"
+         alt="South Mountain landscape"
+         onclick="openLightbox(this)">
+    <figcaption>A very full baby saguaro, this plant is estimated to be ~15yo and seems to be growing without a nurse plant.</figcaption>
+  </figure>
+</div>
+
+<div class="gallery-link">
+  <a href="gallery.html">View full gallery</a>
+</div>
+</section>
+    
+    <!-- FIELDWORK & OUTREACH -->
+    <section id="fieldwork" class="section">
+      <div class="container">
+        <h2>Fieldwork & Outreach</h2>
+        <p>
+          This project is grounded in field measurements across South Mountain
+          and other Sonoran sites, and in sharing what we learn with the public.
+        </p>
+        <ul class="bullets">
+          <li>Long-term monitoring of tagged saguaros across elevation bands.</li>
+          <li>Nighttime FVFM campaigns to track seasonal stress and recovery.</li>
+          <li>Talks to the public in partnership with the Desert Foothills Land Trust.</li>
+        </ul>
+        <p>
+          If you are interested in collaboration, data use, or educational
+          partnerships, please reach out.
+        </p>
+      </div>
+    </section>
+    
+<!-- MEDIA -->
+<section id="media" class="section">
+  <div class="container">
+    <h2>Media</h2>
+    <p>
+      A few recent features, interviews, and mentions related to my work in desert plant physiology and fungal ecology.
+    </p>
+
+    <div class="cards-grid">
+
+      <article class="card">
+        <h3>Podcast</h3>
+        <p>
+          <a href="https://www.indefenseofplants.com/podcast/2025/11/17/ep-553-soil-microbes-amp-desert-plant-restoration" target="_blank" rel="noopener">
+            Soli Microves and Desert Plant Restoration / In Defense of Plants
+          </a>
+        </p>
+        <p class="muted">
+          The importance of root fungi in dryland ecology and restoration. 
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Article</h3>
+        <p>
+          <a href="https://news.nau.edu/leaf-cooling/" target="_blank" rel="noopener">
+            How and icoic desert tree survives extreme heat - and the unique risk it's facing now — The NAU Review
+          </a>
+        </p>
+        <p class="muted">
+          How the foundational riparian tree species Populus fermontii uses water in extreme heat and how it fairs without it.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Blog Post</h3>
+        <p>
+          <a href="https://dbg.org/south-mountain-saguaros/" target="_blank" rel="noopener">
+            South Mountain's Saguaros Still Soak up the Rain
+          </a>
+        </p>
+        <p class="muted">
+          How saguaro on South Mountain are responding to rain events and weather patterns. 
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+    
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          For questions about the research, data visualization, or potential
+          collaborations, you can reach me at:
+        </p>
+        <p class="contact-line">
+          <strong>Email:</strong> <span>aschuessler@dbg.org</span>
+          <!-- replace with a real address when you're ready -->
+        </p>
+        <p class="contact-line">
+          You can also connect with me on LinkedIn and other professional
+          networks (linkedin.com/in/alexandra-schuessler).
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Ali Schuessler</span>
+      <span>Sonoran Desert · Phoenix, Arizona</span>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+</body>
+</html>
