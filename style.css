@@ -60,6 +60,38 @@ body {
   text-decoration: underline;
 }
 
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 260px;
+  padding: 8px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
+  /* THIS is the key fix */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-dropdown-content a {
+  display: block;          /* ensures full-width clickable rows */
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.nav-dropdown-content a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+
 /* Sections */
 .section {
   padding: 3.5rem 0;
