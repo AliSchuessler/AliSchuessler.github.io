@@ -202,16 +202,6 @@ body {
     gap: 0.5rem;
   }
 
-  .site-nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .site-nav a {
-    margin-left: 0;
-    margin-right: 0.75rem;
-    margin-bottom: 0.2rem;
-  }
 
   .figure-frame iframe {
     height: 360px;
