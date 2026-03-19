@@ -1,4 +1,6 @@
-/* Basic reset */
+/* =========================
+   RESET
+========================= */
 *,
 *::before,
 *::after {
@@ -7,6 +9,9 @@
   padding: 0;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -14,14 +19,43 @@ body {
   background-color: #faf7f3;
 }
 
-/* Layout helpers */
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================
+   LAYOUT
+========================= */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Header */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background-color: #f2ece5;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
 .site-header {
   background-color: #1f2933;
   color: #f9fafb;
@@ -49,10 +83,15 @@ body {
   opacity: 0.8;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .site-nav a {
   color: #f9fafb;
   text-decoration: none;
-  margin-left: 1rem;
   font-size: 0.9rem;
 }
 
@@ -60,57 +99,82 @@ body {
   text-decoration: underline;
 }
 
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-caret {
+  margin-left: 6px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
 .nav-dropdown-content {
-  display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   left: 0;
-
   min-width: 260px;
+  z-index: 1000;
+
   padding: 8px;
-
   background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 
-  /* THIS is the key fix */
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  opacity: 0;
+  pointer-events: none;
 }
 
-.nav-dropdown-content a {
-  display: block;          /* ensures full-width clickable rows */
+/* Invisible bridge so the dropdown stays open while moving cursor */
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 10px;
+}
+
+.nav-dropdown:hover .nav-dropdown-content,
+.nav-dropdown:focus-within .nav-dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.site-nav .nav-dropdown-content a,
+.site-nav .nav-dropdown-content a:visited {
+  display: block;
   padding: 10px 12px;
+  border-radius: 10px;
   text-decoration: none;
   color: #1a1a1a;
-  border-radius: 8px;
+  opacity: 1;
 }
 
-.nav-dropdown-content a:hover {
-  background: rgba(0,0,0,0.05);
+.site-nav .nav-dropdown-content a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
 }
 
-
-/* Sections */
-.section {
-  padding: 3.5rem 0;
-}
-
-.section-alt {
-  background-color: #f2ece5;
-}
-
-.section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.section p {
-  margin-bottom: 1rem;
-}
-
-/* Hero */
+/* =========================
+   HERO
+========================= */
 .hero {
   background: radial-gradient(circle at top left, #f5e4c0, #fdfaf6);
 }
@@ -128,7 +192,9 @@ body {
   font-weight: 500;
 }
 
-/* Cards */
+/* =========================
+   CARDS
+========================= */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -147,20 +213,30 @@ body {
   margin-bottom: 0.4rem;
 }
 
+.muted {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   MAP
+========================= */
 .map-placeholder {
   margin-top: 20px;
   min-height: 320px;
-  border: 1px dashed rgba(0,0,0,0.2);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.03);
+  background: rgba(0, 0, 0, 0.03);
   text-align: center;
   padding: 24px;
 }
 
-/* Figures */
+/* =========================
+   FIGURES
+========================= */
 .figure-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -191,14 +267,15 @@ body {
   border: 1px solid #ddd;
 }
 
-/* The iframe itself */
 .figure-frame iframe {
   width: 100%;
   height: 420px;
   border: none;
 }
 
-/* Lists */
+/* =========================
+   LISTS / CONTACT
+========================= */
 .bullets {
   margin-left: 1.2rem;
 }
@@ -207,12 +284,105 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* Contact */
 .contact-line {
   margin-bottom: 0.4rem;
 }
 
-/* Footer */
+/* =========================
+   PHOTOS
+========================= */
+.photo-scroller {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.photo-scroller > .photo-card {
+  flex: 0 0 auto;
+  width: 360px;
+  scroll-snap-align: start;
+}
+
+.photo-scroller .photo-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+}
+
+.photo-card figcaption {
+  margin-top: 8px;
+}
+
+.photo-card figcaption:empty {
+  display: none;
+}
+
+.gallery-link {
+  margin-top: 12px;
+}
+
+.gallery-link a {
+  text-decoration: underline;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   GALLERY PAGE
+========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery-card figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.gallery-card figcaption:empty {
+  display: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
 .site-footer {
   background-color: #111827;
   color: #f9fafb;
@@ -226,7 +396,9 @@ body {
   align-items: center;
 }
 
-/* Responsive tweaks */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
@@ -234,9 +406,21 @@ body {
     gap: 0.5rem;
   }
 
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
 
   .figure-frame iframe {
     height: 360px;
+  }
+
+  .photo-scroller > .photo-card {
+    width: 280px;
+  }
+
+  .photo-scroller .photo-card img {
+    height: 220px;
   }
 
   .footer-inner {
@@ -245,179 +429,3 @@ body {
     gap: 0.3rem;
   }
 }
-/* --- Photos --- */
-/* Photos: horizontal scroller */
-/* Photos: horizontal scroller */
-.photo-scroller {
-  display: flex;
-  gap: 16px;
-
-  overflow-x: auto;
-  padding: 8px 4px 12px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.photo-scroller > .photo-card {
-  flex: 0 0 auto;
-  width: 360px;            /* controls card width on desktop */
-  scroll-snap-align: start;
-}
-
-/* Photo cards: show full image (no cropping) */
-/* Photo cards: show full image (no cropping) */
-.photo-scroller .photo-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  background: rgba(0,0,0,0.03);
-  border-radius: 12px;
-  display: block;
-  cursor: pointer;
-}
-
-.gallery-link {
-  margin-top: 12px;
-}
-
-.gallery-link a {
-  text-decoration: underline;
-}
-
-/* --- Lightbox --- */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  cursor: zoom-out;
-}
-
-.lightbox img {
-  max-width: 92%;
-  max-height: 92%;
-  border-radius: 6px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* Full gallery grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background: rgba(0,0,0,0.03);
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.gallery-card figcaption {
-  margin-top: 8px;
-  font-size: 0.95rem;
-}
-
-/* --- Nav dropdown --- */
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-dropbtn {
-  background: none;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-.nav-caret {
-  margin-left: 6px;
-  font-size: 0.9em;
-  opacity: 0.8;
-}
-
-/* --- Nav dropdown --- */
-.nav-dropdown { position: relative; display: inline-block; }
-
-.nav-dropbtn {
-  background: none;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-.nav-dropdown-content {
-  display: none;
-  position: absolute;
-  top: calc(100% + 0px);
-  left: 0;
-  min-width: 260px;
-  z-index: 1000;
-
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown-content {
-  position: absolute;
-  top: calc(100% + 8px); /* you can keep a gap */
-  left: 0;
-}
-
-/* Invisible bridge so hover doesn't break when moving to menu */
-.nav-dropdown::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: 10px;          /* must match your gap */
-}
-
-/* Keep dropdown open reliably */
-.nav-dropdown:hover .nav-dropdown-content,
-.nav-dropdown:focus-within .nav-dropdown-content {
-  display: block;
-}
-
-/* Remove hover gap */
-.nav-dropdown-content {
-  top: 100%;
-}
-
-
-.site-nav .nav-dropdown-content a,
-.site-nav .nav-dropdown-content a:visited {
-  display: block;
-  padding: 10px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #1a1a1a;
-  opacity: 1;
-}
-
-.site-nav .nav-dropdown-content a:hover {
-  background: rgba(0,0,0,0.05);
-}
-
-.nav-dropdown:hover .nav-dropdown-content { display: block; }
-
-
