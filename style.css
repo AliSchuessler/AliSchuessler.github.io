@@ -115,6 +115,19 @@ body {
   margin-bottom: 0.4rem;
 }
 
+.map-placeholder {
+  margin-top: 20px;
+  min-height: 320px;
+  border: 1px dashed rgba(0,0,0,0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.03);
+  text-align: center;
+  padding: 24px;
+}
+
 /* Figures */
 .figure-grid {
   display: grid;
